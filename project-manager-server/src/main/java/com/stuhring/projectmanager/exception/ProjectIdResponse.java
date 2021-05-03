@@ -1,10 +1,10 @@
 package com.stuhring.projectmanager.exception;
 
-public class ProjectIdExceptionResponse {
+public class ProjectIdResponse {
 
     private String projectIdentifier;
 
-    public ProjectIdExceptionResponse(String projectIdentifier) {
+    public ProjectIdResponse(String projectIdentifier) {
         this.projectIdentifier = projectIdentifier;
     }
 
