@@ -41,14 +41,14 @@ public class Project {
     private String projectIdentifier; // Do no change naming convention to "projectId", issues with JPA using common naming.
     @NotBlank(message = "Project description is required")
     private String description;
-    @JsonFormat(pattern = "YYYY-MM-dd")
+    @JsonFormat(pattern = "yyyy-MM-dd", shape = JsonFormat.Shape.STRING, timezone = "UTC")
     private Date start_date;
-    @JsonFormat(pattern = "YYYY-MM-dd")
+    @JsonFormat(pattern = "yyyy-MM-dd", shape = JsonFormat.Shape.STRING, timezone = "UTC")
     private Date end_date;
-    @JsonFormat(pattern = "YYYY-MM-dd")
+    @JsonFormat(pattern = "yyyy-MM-dd", shape = JsonFormat.Shape.STRING, timezone = "UTC")
     @Column(updatable = false)
     private Date created_At;
-    @JsonFormat(pattern = "YYYY-MM-dd")
+    @JsonFormat(pattern = "yyyy-MM-dd", shape = JsonFormat.Shape.STRING, timezone = "UTC")
     private Date updated_At;
 
     @OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL, mappedBy = "project")

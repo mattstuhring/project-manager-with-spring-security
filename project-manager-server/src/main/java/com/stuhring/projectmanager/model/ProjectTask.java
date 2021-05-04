@@ -1,5 +1,6 @@
 package com.stuhring.projectmanager.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.Column;
@@ -28,6 +29,7 @@ public class ProjectTask {
     private String acceptanceCriteria;
     private String status;
     private Integer priority;
+    @JsonFormat(pattern = "yyyy-MM-dd", shape = JsonFormat.Shape.STRING, timezone = "UTC")
     private Date dueDate;
 
     @ManyToOne(fetch = FetchType.EAGER)
@@ -37,7 +39,9 @@ public class ProjectTask {
 
     @Column(updatable = false)
     private String projectIdentifier;
+    @JsonFormat(pattern = "yyyy-MM-dd", shape = JsonFormat.Shape.STRING, timezone = "UTC")
     private Date created_At;
+    @JsonFormat(pattern = "yyyy-MM-dd", shape = JsonFormat.Shape.STRING, timezone = "UTC")
     private Date updated_At;
 
     public ProjectTask() {

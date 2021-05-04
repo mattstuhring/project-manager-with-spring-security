@@ -42,6 +42,9 @@ public class ProjectService {
             }
         }
 
+        System.out.println("HERE I AM PROJECT START: " + project.getStart_date());
+        System.out.println("HERE I AM PROJECT END: " + project.getEnd_date());
+
         try {
             User user = userRepository.findByUsername(username);
 
