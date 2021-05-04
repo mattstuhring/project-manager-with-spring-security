@@ -111,7 +111,8 @@ class UpdateProjectTask extends Component {
               </Link>
               <h4 className="display-4 text-center">Update Project Task</h4>
               <p className="lead text-center">
-                <b>Project:</b> {backlog_id} <b>Code:</b> {pt_sequence}
+                <b>Project ID:</b> {backlog_id} | <b>Project Task ID:</b>{" "}
+                {pt_sequence}
               </p>
               <form onSubmit={this.onSubmit}>
                 <div className="form-group">

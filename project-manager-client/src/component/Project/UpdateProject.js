@@ -34,7 +34,6 @@ class UpdateProject extends Component {
     }
 
     if (this.props.project !== prevProps.project) {
-      console.log("project");
       const {
         id,
         projectName,
@@ -82,6 +81,10 @@ class UpdateProject extends Component {
           <div className="row">
             <div className="col-md-8 m-auto">
               <h5 className="display-4 text-center">Update Project</h5>
+              <p className="lead text-center">
+                <b>Project Name:</b> {this.state.projectName} |{" "}
+                <b>Project ID:</b> {this.state.projectIdentifier}
+              </p>
               <hr />
               <form onSubmit={this.onSubmit}>
                 <div className="form-group">
